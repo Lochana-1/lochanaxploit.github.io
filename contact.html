@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | LochanaXploit</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #000;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .contact-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background-color: #111;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ff88;
+    }
+    .contact-container h2 {
+      text-align: center;
+      color: #00ff88;
+      margin-bottom: 20px;
+    }
+    .contact-container form {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-container input,
+    .contact-container textarea {
+      background-color: #1a1a1a;
+      border: 1px solid #00ff88;
+      color: #e0ffe0;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    .contact-container button {
+      background-color: #00ff88;
+      color: #000;
+      border: none;
+      padding: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .contact-container button:hover {
+      background-color: #00cc70;
+    }
+
+    /* WhatsApp Button Style */
+    .whatsapp-button {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebc59;
+    }
+
+    /* Header styles */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #0a0a0a;
+      box-shadow: 0 0 10px #00ff88;
+    }
+    .logo {
+      font-size: 24px;
+      color: #00ff88;
+      font-weight: bold;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00ff88;
+    }
+  </style>
+  <script>
+  // Disable right click
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // Try to block common devtools / view-source hotkeys
+  document.addEventListener('keydown', function(e) {
+    // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+Shift+C
+    if (e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key.toUpperCase())) ||
+        (e.ctrlKey && e.key.toLowerCase() === 'u')) {
+      e.preventDefault();
+    }
+    // Block Ctrl+A / Ctrl+C if you want (optional)
+    if ((e.ctrlKey || e.metaKey) && (e.key === 'a' || e.key === 'c')) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+</head>
+<body>
+
+  <header>
+
+    <a href="index.html" class="logo" style="text-decoration: none;">LochanaXploit</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html">Contact</a>
+
+
+    </nav>
+  </header>
+
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xrblyada" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://example.com/thanks.html">
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- ✅ WhatsApp Button -->
+    <a 
+      href="https://wa.me/message/GU4VWVJDCT6IL1" 
+      target="_blank" 
+      class="whatsapp-button">
+      💬 Chat with me on WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>
