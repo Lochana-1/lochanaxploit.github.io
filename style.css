@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #e0ffe0;
+}
+
+header {
+  background-color: #111;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #00ff88;
+  font-size: 24px;
+  font-weight: bold;
+  animation: neonGlow 2s infinite;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ccc;
+}
+
+nav a:hover {
+  color: #00ff88;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #001f1f, #003333);
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #00ff88;
+  animation: fadeInUp 1.5s ease-in-out both;
+  animation-delay: 0.2s;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 20px 0;
+  animation: fadeInUp 1.5s ease-in-out both;
+  animation-delay: 0.4s;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #00ff88;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  animation: fadeInUp 1.5s ease-in-out both, pulse 2.5s infinite;
+  animation-delay: 0.6s;
+  transition: transform 0.2s;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+}
+
+.services {
+  padding: 50px 20px;
+  background-color: #0f0f0f;
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #00ff88;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.5s; }
+.card:nth-child(3) { animation-delay: 0.7s; }
+
+.card h3 {
+  color: #00ff88;
+}
+
+.about {
+  padding: 50px 20px;
+  background-color: #111;
+  text-align: center;
+}
+
+footer {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .social a {
+  color: #00ff88;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes neonGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88;
+  }
+  50% {
+    text-shadow: 0 0 20px #00ff88, 0 0 30px #00ff88;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(0, 255, 136, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 255, 136, 0);
+  }
+}
+
+
+/* 🔁 Mobile Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .contact-container {
+    margin: 30px 10px;
+    padding: 20px;
+  }
+
+  footer .social {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Hacker Style Neon Cursor Set */
+body {
+  cursor: url('Hacker_Cursor_Set/[HC] Normal.png'), auto;
+}
+
+
+a:hover, button:hover {
+  cursor: url('Hacker_Cursor_Set/neon-cursor-hover.png'), pointer;
+}
